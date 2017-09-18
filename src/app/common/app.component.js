@@ -12,5 +12,11 @@ export const appComponent = {
             // TODO_DM would it not be better to put this in onInit or getUser via promise?
             this.user = AuthService.getUser(); 
         }
+
+        logout() {
+            return this.authService
+                .logout()
+                .then(() => this.$state.go('auth.login'));
+        }
     }
 };
