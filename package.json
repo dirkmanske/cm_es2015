@@ -21,6 +21,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "firebase": "^3.9.0",
+    "jshint": "^2.9.5",
     "ng-annotate-webpack-plugin": "^0.2.1-pre",
     "sw-precache": "^5.2.0"
   },
