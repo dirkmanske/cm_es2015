@@ -1,4 +1,4 @@
-import loader from 'angular-loader-bar';
+import loader from 'angular-loading-bar';
 import { app } from './app.module';
 
 export const common = angular

@@ -22,8 +22,6 @@ const prep = {
   copy: new copyPlugin([{
     from: paths.static.index,
   }, {
-    from: paths.static.manifest,
-  }, {
     from: paths.static.images,
     to: 'img/',
     flatten: true,

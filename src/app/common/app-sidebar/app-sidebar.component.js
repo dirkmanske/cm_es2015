@@ -1,9 +1,8 @@
-import angular from 'angular';
 import templateUrl from './app-sidebar.html';
 
 export const sidebarComponent = {
     templateUrl,
-    controller: SidebarComponent {
+    controller: class SidebarComponent {
         constructor() {
             'ngInject';
 

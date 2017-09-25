@@ -48,6 +48,7 @@
     "sass-loader": "^4.1.1",
     "style-loader": "^0.18.2",
     "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.15.0",
     "yargs": "^8.0.2"
   }
 }

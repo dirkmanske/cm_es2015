@@ -2,8 +2,8 @@ import templateUrl from './app-nav.html';
 
 export const navComponent = {
     bindings: {
-        user: '<',
-        onLogout: '&'
+        user: '<', // One-way binding
+        onLogout: '&' // Output binding which functions as callback to events
     },
     templateUrl
 };

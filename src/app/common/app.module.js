@@ -1,7 +1,8 @@
 import uiRouter from '@uirouter/angularjs';
+import { AppComponent } from './app.component';
 import { appNav } from './app-nav/app-nav.module';
 import { appSidebar } from './app-sidebar/app-sidebar.module';
-import { AppComponent } from './app.component';
+import './app.scss';
 
 export const app = angular
     .module('common.app', [

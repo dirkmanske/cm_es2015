@@ -1,4 +1,3 @@
-import angular from 'angular';
 import { SidebarComponent } from './app-sidebar.component';
 import './app-sidebar.scss';
 
