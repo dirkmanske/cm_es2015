@@ -13,11 +13,11 @@ module.exports = function(config) {
       // list of files / patterns to load in the browser
       files: [
         'node_modules/angular/angular.js',
+        'node_modules/angular-mocks/angular-mocks.js',
         'node_modules/@uirouter/angularjs/release/angular-ui-router.js',
         'node_modules/angular-loading-bar/build/loading-bar.min.js',
         // 'node_modules/firebase/firebase.js',
         // 'node_modules/angularfire/dist/angularfire.js',
-        'node_modules/angular-mocks/angular-mocks.js',
         'mocks/firebase.mock.js',
         'dist/js/bundle.js',
         //'src/app/**/*.js',

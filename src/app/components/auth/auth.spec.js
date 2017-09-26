@@ -1,6 +1,6 @@
 describe('Auth', () => {
     beforeEach(() => {
-        //angular.mock.module('components.auth');
+        angular.mock.module('components.auth');
         angular.mock.module(($stateProvider) => {
             $stateProvider.state('app', { url: '/' });
         });
