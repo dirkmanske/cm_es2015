@@ -1,7 +1,7 @@
-import { NavComponent } from './app-nav.component';
+import { navComponent } from './app-nav.component';
 import './app-nav.scss';
 
 export const appNav = angular
     .module('common.app-nav', [])
-    .component('appNav', NavComponent)
+    .component('appNav', navComponent)
     .name;

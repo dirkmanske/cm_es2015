@@ -6,10 +6,9 @@ export const registerComponent = {
         constructor(AuthService, $state) {
             'ngInject';
 
-            this.AuthService = AuthService;
+            this.authService = AuthService;
             this.$state = $state;
         }
-
         $onInit() {
             this.error = null;
             this.user = {
@@ -17,14 +16,12 @@ export const registerComponent = {
                 password: ''
             };
         }
-
         createUser(event) {
-            return this.AuthService
+            return this.authService
                 .register(event.user)
                 .then(() => {
                     this.$state.go('app');
-                },
-                reason => {
+                }, reason => {
                     this.error = reason.message;
                 });
         }

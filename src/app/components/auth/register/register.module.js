@@ -1,11 +1,11 @@
-import { uiRouter } from '@uirouter/angularjs';
-import { RegisterComponent } from './register.component';
+import uiRouter from '@uirouter/angularjs';
+import { registerComponent } from './register.component';
 
 export const register = angular
     .module('components.auth.register', [
         uiRouter
     ])
-    .component('register', RegisterComponent)
+    .component('register', registerComponent)
     .config(($stateProvider) => {
         'ngInject';
 
