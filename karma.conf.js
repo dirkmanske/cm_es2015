@@ -19,7 +19,7 @@ module.exports = function(config) {
         // 'node_modules/firebase/firebase.js',
         // 'node_modules/angularfire/dist/angularfire.js',
         'mocks/firebase.mock.js',
-        'dist/js/bundle.js',
+        'dist/js/app.bundle.js',
         //'src/app/**/*.js',
         'src/app/**/*.spec.js',
       ],

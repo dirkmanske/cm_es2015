@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import angularfire from 'angularfire';
 import uiRouter from '@uirouter/angularjs';
 import { AuthService } from './auth.service';
-//import { login } from './login/login.module';
+import { login } from './login/login.module';
 import { register } from './register/register.module';
 //import { authForm } from './auth-form/auth-form.module';
 import './auth.scss';
@@ -21,7 +21,7 @@ export const auth = angular
     .module('components.auth', [
         angularfire,
         uiRouter,
-        //login,
+        login,
         register,
         //auth-form
     ])

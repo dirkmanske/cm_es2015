@@ -75,7 +75,7 @@ describe('Auth', () => {
 
             promise.then((result) => {
                 expect(result).toEqual(response);
-                expect(AuthService.isAuthenticated).toBe(true);
+                expect(AuthService.isAuthenticated()).toBe(true);
                 expect(AuthService.getUser()).toEqual(response);
             });
 
@@ -86,7 +86,7 @@ describe('Auth', () => {
             let promise = AuthService.logout();
 
             promise.then((result) => {
-                expect(AuthService.isAuthenticated).toBe(false);
+                expect(AuthService.isAuthenticated()).toBe(false);
                 expect(AuthService.getUser()).toBeUndefined();
             });
 

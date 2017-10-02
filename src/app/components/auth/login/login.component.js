@@ -1,6 +1,6 @@
 import templateUrl from './login.html';
 
-export const login = {
+export const loginComponent = {
     templateUrl,
     controller: class LoginComponent {
         constructor(AuthService, $state) {

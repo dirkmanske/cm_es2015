@@ -34,7 +34,7 @@ describe('App', () => {
         it('should redirect to contacts state', () => {
             spyOn(AuthService, 'isAuthenticated').and.returnValue(true);
 
-            goto('/app');
+            goTo('/app');
 
             expect($state.current.name).toEqual('contacts');
         });
@@ -67,18 +67,20 @@ describe('App', () => {
         });
 
         it('should go to the login state on logout', () => {
-            spyOn(AuthService, 'logout').and.callFake(() => {
-                const deferred = $q.defer();
-                deferred.resolve();
-                return deferred.promise;
-            });
+            spyOn(AuthService, 'logout')
+                .and.callFake(() => {
+                    const deferred = $q.defer();
+                    deferred.resolve();
+                    return deferred.promise;
+                });
             spyOn($state, 'go').and.callThrough();
 
-            controller = $componentController('app', { $scope: {}, AuthService, $state});
+            controller = $componentController('app', { $scope: {}, AuthService, $state });
+            
             controller.logout();
-            rootScope.$digest();
+            $rootScope.$digest();
 
-            expect(AuthService.logout()).toHaveBeenCalled();
+            expect(AuthService.logout).toHaveBeenCalled();
             expect($state.go).toHaveBeenCalledWith('auth.login');
         });
     });

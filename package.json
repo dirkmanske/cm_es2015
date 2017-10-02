@@ -7,6 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server -d --progress --colors --inline --hot --https --open --content-base bin/",
     "test": "karma start",
+    "build": "webpack --watch",
     "deploy": "npm run build:dist && firebase deploy"
   },
   "license": "MIT",

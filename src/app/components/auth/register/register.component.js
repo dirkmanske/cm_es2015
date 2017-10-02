@@ -11,7 +11,7 @@ export const registerComponent = {
         }
         $onInit() {
             this.error = null;
-            this.user = {
+            this.user = { //
                 email: '',
                 password: ''
             };
