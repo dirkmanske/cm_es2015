@@ -1,12 +1,12 @@
 describe('Auth', () => {
     beforeEach(() => {
-        //angular.mock.module('components.auth');
-        angular.mock.module(($stateProvier) => {
-            $stateProvier.state('app', { url: '/' });
+        angular.mock.module('components.auth');
+        angular.mock.module(($stateProvider) => {
+            $stateProvider.state('app', { url: '/' });
         });
     })
 
-    /* describe('Routes', () => {
+    describe('Routes', () => {
         let $state;
         let $location;
         let $rootScope;
@@ -97,12 +97,12 @@ describe('Auth', () => {
             promise = controller.createUser( {} );
 
             promise.then((result) => {
-                expect(AuthService, 'register').toHaveBeenCalledWith(mockEvent.user);
+                expect(AuthService.register).toHaveBeenCalledWith(mockEvent.user);
                 expect(controller.error).toEqual(mockMessage);
                 expect($state.go).not.toHaveBeenCalled();
             });
 
             $rootScope.$digest();
         });
-    }); */
+    });
 });

@@ -12,7 +12,7 @@ export const formComponent = {
         constructor() {
             'ngInject';
         }
-        $onChanges(changes) {
+        $onChanges(changes) { // works only for one-way bindings
             if(changes.user) {
                 this.user = angular.copy(this.user);
             }

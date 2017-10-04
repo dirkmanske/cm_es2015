@@ -4,7 +4,7 @@ import uiRouter from '@uirouter/angularjs';
 import { AuthService } from './auth.service';
 import { login } from './login/login.module';
 import { register } from './register/register.module';
-//import { authForm } from './auth-form/auth-form.module';
+import { authForm } from './auth-form/auth-form.module';
 import './auth.scss';
 
 const firebaseConfig = {
@@ -20,10 +20,10 @@ export const app = firebase.initializeApp(firebaseConfig);
 export const auth = angular
     .module('components.auth', [
         angularfire,
-        uiRouter,
+        uiRouter, 
         login,
         register,
-        //auth-form
+        authForm
     ])
     .config(($firebaseRefProvider) => {
         'ngInject';
