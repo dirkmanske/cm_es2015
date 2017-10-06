@@ -1,6 +1,6 @@
 import uiRouter from '@uirouter/angularjs';
-import { contactsFilter } from './contacts.filter';
 import { contactsComponent } from './contacts.component';
+import { contactsFilter } from './contacts.filter';
 import './contacts.scss';
 
 export const contacts = angular

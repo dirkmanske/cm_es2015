@@ -6,6 +6,6 @@ export const contact = angular
     .module('components.contact', [
         contacts
     ])
-    .service('ContactsService', ContactService)
+    .service('ContactService', ContactService)
     .directive('lengthCheck', lengthCheck)
     .name;
