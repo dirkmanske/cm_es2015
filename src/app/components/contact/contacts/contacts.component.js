@@ -1,4 +1,4 @@
-import templateUrl from './contacts';
+import templateUrl from './contacts.html';
 
 export const contactsComponent = {
     bindings: {

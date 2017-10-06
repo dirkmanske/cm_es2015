@@ -1,0 +1,20 @@
+{
+  "version": "3.3.1",
+
+  "configurations": [
+    {
+      "name": "Launch local",
+      "type": "chrome",
+      "request": "launch",
+      "trace": true,
+      "url": "https://localhost:8080", //Change to whatever you homepage is
+      "runtimeArgs": [
+        "--new-window", //Open in new window
+        "--user-data-dir=${workspaceRoot}/tmp", //Can be any directory. Makes chrome load in a different directory so that it opens in a new instance.
+        "--remote-debugging-port=9222" //Open in port 9222 (standard chrome debug port)
+      ],
+      "webRoot": "https://localhost:8080/js/app.bundle.js", //The directory that contains js, ts and map files
+      "sourceMaps": false
+    }
+  ]
+}

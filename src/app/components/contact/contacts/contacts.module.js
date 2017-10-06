@@ -1,4 +1,4 @@
-import uiRouter from './@uirouter/angularjs';
+import uiRouter from '@uirouter/angularjs';
 import { contactsFilter } from './contacts.filter';
 import { contactsComponent } from './contacts.component';
 import './contacts.scss';
@@ -22,7 +22,7 @@ export const contacts = angular
                         value: 'none'
                     }
                 },
-                resolve: { // map of dependencies which should be injected into the controller
+                resolve: { // map of dependencies which should be injected into the controller, see constructor
                     contacts(ContactService) {
                         'ngInject';
 

@@ -1,4 +1,5 @@
 import { ContactService } from './contact.service';
+import { lengthCheck } from './length-check/length-check.directive';
 import { contacts } from './contacts/contacts.module';
 
 export const contact = angular
@@ -6,4 +7,5 @@ export const contact = angular
         contacts
     ])
     .service('ContactsService', ContactService)
+    .directive('lengthCheck', lengthCheck)
     .name;
