@@ -4,36 +4,36 @@ import { contactsFilter } from './contacts.filter';
 import './contacts.scss';
 
 export const contacts = angular
-    .module('components.contact.contacts', [
-        uiRouter
-    ])
-    .component('contacts', contactsComponent)
-    .filter('contactsFilter', contactsFilter)
-    .config(($stateProvider) => {
-        'ngInject';
+  .module('components.contact.contacts', [
+    uiRouter
+  ])
+  .component('contacts', contactsComponent)
+  .filter('contactsFilter', contactsFilter)
+  .config(($stateProvider) => {
+    'ngInject';
 
-        $stateProvider
-            .state('contacts', { // registers a state configuration under the name contacts
-                parent: 'app',
-                url: '/contacts?filter',
-                component: 'contacts',
-                params: {
-                    filter: {
-                        value: 'none'
-                    }
-                },
-                resolve: { // map of dependencies which should be injected into the controller, see constructor
-                    contacts(ContactService) {
-                        'ngInject';
+    $stateProvider
+      .state('contacts', {
+        parent: 'app',
+        url: '/contacts?filter',
+        component: 'contacts',
+        params: {
+          filter: {
+            value: 'none'
+          }
+        },
+        resolve: {
+          contacts(ContactService) {
+            'ngInject';
 
-                        return ContactService.getContactsList().$loaded();
-                    },
-                    filter($transition$) {
-                        'ngInject';
-                        console.log('$transition$');
-                        return $transition$.params();
-                    }
-                }
-            });
-    })
-    .name;
+            return ContactService.getContactsList().$loaded();
+          },
+          filter($transition$) {
+            'ngInject';
+
+            return $transition$.params();
+          }
+        }
+      });
+  })
+  .name;
