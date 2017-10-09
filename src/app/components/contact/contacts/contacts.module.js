@@ -30,7 +30,7 @@ export const contacts = angular
                     },
                     filter($transition$) {
                         'ngInject';
-
+                        console.log('$transition$');
                         return $transition$.params();
                     }
                 }

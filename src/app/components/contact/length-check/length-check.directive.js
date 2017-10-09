@@ -1,7 +1,7 @@
 export function lengthCheck() {
     return {
         restrict: 'A', // matching type E, A, C or M (M for comments)
-        require: 'ngModel',
+        require: 'ngModel', // 
         compile($elem) { // factory function, invoked only once when compiler matches directive
             $elem.addClass('dynamic-input');
             return ($scope, $element, $attrs, $ctrl) => {
